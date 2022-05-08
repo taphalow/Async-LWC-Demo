@@ -21,6 +21,7 @@ export default class AsyncDemo extends LightningElement {
             this.initComponent();
         } else if (error) {
             // Handle error
+            console.log(`### Error : ${error}`);
         }
     }
 
@@ -34,7 +35,7 @@ export default class AsyncDemo extends LightningElement {
             loadScript(this, libThree)
         ]);
         this.libsLoaded = true;
-        // Try to init component
+        // Try to init component 
         this.initComponent();
     }
 
